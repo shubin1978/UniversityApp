@@ -1,0 +1,42 @@
+﻿@startuml
+enum Sex {
+Male
+Female
+}
+
+Sex <--* Person
+abstract class Person {
++ Id : Guid
++ LastName : string
++ First : string
++ Patronymic : string
++ DateOfBirth : DateTime
++ Sex : Sex
+}
+
+Person <|-- Teacher
+class Teacher {
++ Faculty :string
++ Subjects : string[]
+}
+
+Teacher <--* Mark
+class Mark {
++ Id : string
++ Date : DateTime
++ Subject : string
++ Teacher : Teacher
++ Rating : int
+}
+
+Mark <--o Student
+Person <|-- Student
+class Student {
++ Faculty :string
++ Marks : Mark[]
+}
+
+
+
+
+@enduml
