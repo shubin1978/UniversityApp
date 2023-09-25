@@ -1,4 +1,6 @@
-﻿namespace UniversityApp.Models;
+﻿using System.Text.Json.Serialization;
+
+namespace UniversityApp.Models;
 
 public record Person
 {
@@ -6,10 +8,11 @@ public record Person
     public string LastName { get; init; }
     public string FirstName { get; init; }
     public string? Patronymic { get; init; }
+    [JsonIgnore]
     public string FullName => $"{LastName} {FirstName} {Patronymic ?? ""}";
     
     public DateTime DateOfBirth { get; init; }
-
+    [JsonIgnore]
     public int Age
     {
         get
