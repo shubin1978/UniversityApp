@@ -10,7 +10,7 @@ public class JsonContext : FileContext,IContext
     public List<Student> Students { get; set; }
 
     private readonly JsonSerializerOptions _options;
-    
+     
     public JsonContext(string pathToTeachers, string pathToStudents) : base(pathToTeachers, pathToStudents)
     {
         Teachers = new List<Teacher>();
@@ -33,8 +33,8 @@ public class JsonContext : FileContext,IContext
         var teachersJson = JsonSerializer.Serialize(Teachers, _options);
         File.WriteAllText( PathToTeachers,teachersJson);
 
-    }
-
+    } 
+ 
     public void ImportStudents()
     {
         var studentsJson = File.ReadAllText(PathToStudents);

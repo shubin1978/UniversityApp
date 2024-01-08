@@ -26,4 +26,4 @@ public static class CLI
         Print(message, ConsoleColor.Yellow);
         return Console.ReadLine();
     }
-}
+} 

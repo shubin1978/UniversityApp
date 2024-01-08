@@ -71,4 +71,4 @@ foreach (var s in students)
     {
         Console.WriteLine($"\t{m.Id} ({m.Date:d}) -> {m.Subject}, {m.Teacher.FullName} ->> {m.Rating} ");
     }
-}*/
+}*/ 
