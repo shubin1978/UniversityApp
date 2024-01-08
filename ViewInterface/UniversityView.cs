@@ -1,4 +1,6 @@
-﻿using UniversityApp.Models;
+﻿
+
+using UniversityApp.Models;
 
 namespace UniversityApp.ViewInterface;
 
