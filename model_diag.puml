@@ -1,17 +1,10 @@
 ﻿@startuml
-enum Sex {
-Male
-Female
-}
-
-Sex <--* Person
 abstract class Person {
-+ Id : Guid
++ Id : int
 + LastName : string
 + First : string
 + Patronymic : string
 + DateOfBirth : DateTime
-+ Sex : Sex
 }
 
 Person <|-- Teacher

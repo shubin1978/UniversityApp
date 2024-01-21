@@ -41,7 +41,7 @@ CREATE TABLE table_teacher_subjects
     id SERIAL NOT NULL PRIMARY KEY ,
     teacher_id INT NOT NULL ,
     subject_id INT NOT NULL ,
-    FOREIGN KEY (teacher_id) REFERENCES table_subjects(id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+    FOREIGN KEY (teacher_id) REFERENCES table_teachers(id) ON DELETE NO ACTION ON UPDATE NO ACTION,
     FOREIGN KEY (subject_id) REFERENCES table_subjects(id) ON DELETE NO ACTION ON UPDATE NO ACTION
 );
 
